@@ -19,8 +19,12 @@
         <br />
         <asp:HyperLink ID="HyperLink1" runat="server" BackColor="Red" BorderColor="White" BorderStyle="Double" ForeColor="White" NavigateUrl="~/WebPages/Asistencia.aspx">Asistencia</asp:HyperLink>
         <br />
-        <br />
+        <br />    
         <asp:HyperLink ID="HyperLink2" runat="server" BackColor="Red" BorderColor="White" BorderStyle="Double" ForeColor="White" NavigateUrl="~/WebPages/Vacaciones.aspx">Vacaciones</asp:HyperLink>
+        <br />
+        <br />
+        <asp:HyperLink ID="HyperLink5" runat="server" BackColor="Red" BorderColor="White" BorderStyle="Double" ForeColor="White" NavigateUrl="~/WebPages/Empleados.aspx">Empleados</asp:HyperLink>
+
     </form>
 </body>
 </html>

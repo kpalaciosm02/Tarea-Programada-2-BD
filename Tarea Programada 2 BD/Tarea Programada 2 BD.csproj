@@ -124,6 +124,14 @@
     <Content Include="Content\bootstrap.css.map" />
     <Content Include="Content\bootstrap-theme.min.css.map" />
     <Content Include="Content\bootstrap-theme.css.map" />
+    <Content Include="WebPages\Asistencia.aspx" />
+    <Content Include="WebPages\Empleado.aspx" />
+    <Content Include="WebPages\PaginaInicio.aspx" />
+    <Content Include="WebPages\Planilla.aspx" />
+    <Content Include="WebPages\Puestos.aspx" />
+    <Content Include="WebPages\Registro.aspx" />
+    <Content Include="WebPages\Vacaciones.aspx" />
+    <Content Include="WebPages\VistaCuenta.aspx" />
     <None Include="Scripts\jquery-3.4.1.intellisense.js" />
     <Content Include="Scripts\bootstrap.js" />
     <Content Include="Scripts\bootstrap.min.js" />
@@ -196,15 +204,73 @@
     </Compile>
     <Compile Include="Site.Mobile.Master.cs">
       <DependentUpon>Site.Mobile.Master</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
     </Compile>
     <Compile Include="Site.Mobile.Master.designer.cs">
       <DependentUpon>Site.Mobile.Master</DependentUpon>
     </Compile>
     <Compile Include="ViewSwitcher.ascx.cs">
       <DependentUpon>ViewSwitcher.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
     </Compile>
     <Compile Include="ViewSwitcher.ascx.designer.cs">
       <DependentUpon>ViewSwitcher.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="WebPages\Asistencia.aspx.cs">
+      <DependentUpon>Asistencia.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="WebPages\Asistencia.aspx.designer.cs">
+      <DependentUpon>Asistencia.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="WebPages\Empleado.aspx.cs">
+      <DependentUpon>Empleado.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="WebPages\Empleado.aspx.designer.cs">
+      <DependentUpon>Empleado.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="WebPages\PaginaInicio.aspx.cs">
+      <DependentUpon>PaginaInicio.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="WebPages\PaginaInicio.aspx.designer.cs">
+      <DependentUpon>PaginaInicio.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="WebPages\Planilla.aspx.cs">
+      <DependentUpon>Planilla.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="WebPages\Planilla.aspx.designer.cs">
+      <DependentUpon>Planilla.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="WebPages\Puestos.aspx.cs">
+      <DependentUpon>Puestos.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="WebPages\Puestos.aspx.designer.cs">
+      <DependentUpon>Puestos.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="WebPages\Registro.aspx.cs">
+      <DependentUpon>Registro.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="WebPages\Registro.aspx.designer.cs">
+      <DependentUpon>Registro.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="WebPages\Vacaciones.aspx.cs">
+      <DependentUpon>Vacaciones.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="WebPages\Vacaciones.aspx.designer.cs">
+      <DependentUpon>Vacaciones.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="WebPages\VistaCuenta.aspx.cs">
+      <DependentUpon>VistaCuenta.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="WebPages\VistaCuenta.aspx.designer.cs">
+      <DependentUpon>VistaCuenta.aspx</DependentUpon>
     </Compile>
   </ItemGroup>
   <ItemGroup>
