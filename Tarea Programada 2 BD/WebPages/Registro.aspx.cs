@@ -4,6 +4,8 @@ using System.Linq;
 using System.Web;
 using System.Web.UI;
 using System.Web.UI.WebControls;
+using System.Data.SqlClient;
+using System.Data;
 
 namespace Tarea_Programada_2_BD.WebPages
 {
@@ -12,6 +14,47 @@ namespace Tarea_Programada_2_BD.WebPages
         protected void Page_Load(object sender, EventArgs e)
         {
 
+        }
+
+        protected void Button2_Click(object sender, EventArgs e)
+        {
+            string Usuario = TextBox1.Text;
+            string Password = TextBox2.Text;
+            try
+            {
+                if (TextBox1.Text != "" && TextBox2.Text != "")
+                {
+
+                    SqlConnection con = new SqlConnection("Data Source = cr-dbs.database.windows.net; Initial Catalog = 'TareaDOS'; Persist Security Info = True; User ID = admin2022; Password = server2022!!");
+                    con.Open();
+
+
+                    Console.WriteLine("connected");
+                    SqlCommand com = new SqlCommand(); // Create a object of SqlCommand class
+                    com.Connection = con; //Pass the connection object to Command
+                    com.CommandType = CommandType.StoredProcedure; // We will use stored procedure.
+                    com.CommandText = "spVerificarUsuario"; //Stored Procedure Name
+
+                    com.Parameters.Add("@inUsuario", SqlDbType.VarChar).Value = Usuario;
+                    com.Parameters.Add("@inPassword", SqlDbType.Money).Value = Password;
+
+                    com.ExecuteNonQuery();
+
+                    Label1.Text = "Se agrego un articulo";
+                    TextBox1.Text = "";
+                    TextBox2.Text = "";
+                }
+                else
+                {
+                    Label1.Text = "Debe ingresar la informacion solicitada";
+                    //conexion.Close(); 
+                }
+
+            }
+            catch (Exception ex)
+            {
+
+            }
         }
     }
 }

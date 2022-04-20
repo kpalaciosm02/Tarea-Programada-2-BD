@@ -31,13 +31,6 @@
     <div _designerregion="0">
         <asp:Label ID="Label1" runat="server" Text="Label"></asp:Label>
         <br />
-        <asp:SqlDataSource ID="SqlDataSource1" runat="server" ConnectionString="<%$ ConnectionStrings:TareaDosConexionPuesto %>" SelectCommand="spInsertarPuesto" SelectCommandType="StoredProcedure">
-            <SelectParameters>
-                
-                <asp:ControlParameter Name="Nombre" Type="String" ControlID="TextBox1" />
-                <asp:ControlParameter Name="SalarioXHora" Type="Int32" ControlID="TextBox2" />
-            </SelectParameters>
-        </asp:SqlDataSource>
         <asp:GridView ID ="GridView1" runat="server" DataKeyNames="IdTipoIdentificacion"
             DataSourceID="SqlDataSource1" CssClass="auto-style1" Width="338px" AllowSorting="True">
 
@@ -53,8 +46,5 @@
 
         </asp:GridView>
 
-        <br />
-        <asp:SqlDataSource ID="SqlDataSource2" runat="server" ConnectionString="<%$ ConnectionStrings:TareaDosConexionEmpleado %>" SelectCommand="SELECT [Nombre], [IdTipoIdentificacion], [ValorDocumentoIdentificacion], [IdDepartamento], [Puesto], [FechaNacimiento] FROM [Empleado]"></asp:SqlDataSource>
-        <br />
     </div>
 </asp:Content>
