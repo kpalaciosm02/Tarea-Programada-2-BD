@@ -58,6 +58,18 @@
         </tr>
     </table>
         <asp:Label ID="Label1" runat="server" Text="Label"></asp:Label>
+        <asp:GridView ID="GridView1" runat="server" AllowSorting="True" AutoGenerateColumns="False" DataKeyNames="ValorDocumentoIdentificacion" DataSourceID="SqlDataEmpleado">
+            <Columns>
+                <asp:CommandField ShowSelectButton="True" />
+                <asp:BoundField DataField="Nombre" HeaderText="Nombre" SortExpression="Nombre" />
+                <asp:BoundField DataField="IdTipoIdentificacion" HeaderText="IdTipoIdentificacion" SortExpression="IdTipoIdentificacion" />
+                <asp:BoundField DataField="ValorDocumentoIdentificacion" HeaderText="ValorDocumentoIdentificacion" ReadOnly="True" SortExpression="ValorDocumentoIdentificacion" />
+                <asp:BoundField DataField="FechaNacimiento" HeaderText="FechaNacimiento" SortExpression="FechaNacimiento" />
+                <asp:BoundField DataField="Puesto" HeaderText="Puesto" SortExpression="Puesto" />
+                <asp:BoundField DataField="IdDepartamento" HeaderText="IdDepartamento" SortExpression="IdDepartamento" />
+            </Columns>
+        </asp:GridView>
+        <asp:SqlDataSource ID="SqlDataEmpleado" runat="server" ConnectionString="<%$ ConnectionStrings:TareaDosConexionPuesto %>" SelectCommand="spListarEmpleados" SelectCommandType="StoredProcedure"></asp:SqlDataSource>
         <br />
         
     </asp:Content>

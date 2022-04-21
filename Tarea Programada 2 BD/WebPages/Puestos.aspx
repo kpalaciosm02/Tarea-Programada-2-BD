@@ -3,7 +3,7 @@
     <br />
         <asp:Button ID="Button1" runat="server" Text="Insertar" OnClick="Button1_Click" />
         &nbsp;&nbsp;&nbsp;
-    <asp:Button ID="Button2" runat="server" Text="Confirmar Cambios"/>
+    <asp:Button ID="Button2" runat="server" Text="Confirmar Cambios" OnClick="Button2_Click"/>
     &nbsp;&nbsp;&nbsp;
     <asp:Button ID="Button3" runat="server" Text="Borrar" style="margin-left: 20" />
     <br />

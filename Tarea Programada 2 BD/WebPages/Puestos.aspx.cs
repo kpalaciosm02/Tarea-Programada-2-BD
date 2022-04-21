@@ -14,6 +14,10 @@ namespace Tarea_Programada_2_BD.WebPages
     {
         protected void Page_Load(object sender, EventArgs e)
         {
+            Tabla();
+        }
+        void Tabla()
+        {
             try
             {
 
@@ -90,6 +94,45 @@ namespace Tarea_Programada_2_BD.WebPages
         {
             TextBox1.Text = GridView1.SelectedRow.Cells[1].Text;
             TextBox2.Text = GridView1.SelectedRow.Cells[2].Text;
+        }
+
+        protected void Button2_Click(object sender, EventArgs e)
+        {
+            if ((TextBox1.Text != "" && TextBox2.Text != "") && (GridView1.SelectedIndex >= 0))
+            {
+                string puesto = TextBox1.Text;
+                string salario = TextBox2.Text;
+                string puestoOr =  GridView1.SelectedRow.Cells[1].Text;
+                string salarioOr = GridView1.SelectedRow.Cells[2].Text;
+
+                SqlConnection con = new SqlConnection("Data Source = cr-dbs.database.windows.net; Initial Catalog = 'TareaDOS'; Persist Security Info = True; User ID = admin2022; Password = server2022!!");
+                con.Open();
+
+
+                Console.WriteLine("connected");
+                SqlCommand com = new SqlCommand(); // Create a object of SqlCommand class
+                com.Connection = con; //Pass the connection object to Command
+                com.CommandType = CommandType.StoredProcedure; // We will use stored procedure.
+                com.CommandText = "spModPuesto"; //Stored Procedure Name
+
+                com.Parameters.Add("@inPuesto", SqlDbType.VarChar).Value = puesto;
+                com.Parameters.Add("@inPuestoOriginal", SqlDbType.VarChar).Value = puestoOr;
+
+                com.Parameters.Add("@inSalario", SqlDbType.Money).Value = salario;
+                com.Parameters.Add("@inSalarioOriginal", SqlDbType.Money).Value = salario;
+
+
+
+                com.ExecuteNonQuery();
+
+
+                Label1.Text = "Se modifico el puesto";
+                //Setting the EditIndex property to -1 to cancel the Edit mode in Gridview  
+                GridView1.EditIndex = -1;
+
+
+                Tabla();
+            }
         }
     }
 }
