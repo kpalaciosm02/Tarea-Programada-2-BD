@@ -3,8 +3,9 @@
     <br />
         <asp:Button ID="Button1" runat="server" Text="Insertar" OnClick="Button1_Click" />
         &nbsp;&nbsp;&nbsp;
-    <asp:Button ID="Button2" runat="server" Text="Confirmar Cambios" />
-    <asp:Button ID="Button3" runat="server" Text="Borrar" />
+    <asp:Button ID="Button2" runat="server" Text="Confirmar Cambios"/>
+    &nbsp;&nbsp;&nbsp;
+    <asp:Button ID="Button3" runat="server" Text="Borrar" style="margin-left: 20" />
     <br />
     <br />   
     <table style="width:100%;">
@@ -28,23 +29,16 @@
             <td>&nbsp;</td>
         </tr>
     </table>
-    <div _designerregion="0">
         <asp:Label ID="Label1" runat="server" Text="Label"></asp:Label>
-        <br />
-        <asp:GridView ID ="GridView1" runat="server" DataKeyNames="IdTipoIdentificacion"
-            DataSourceID="SqlDataSource1" CssClass="auto-style1" Width="338px" AllowSorting="True">
-
+        <asp:GridView ID="GridView1" runat="server" AllowSorting="True" AutoGenerateColumns="False" DataSourceID="SqlDataPuesto" OnSelectedIndexChanged="GridView1_SelectedIndexChanged" Width="520px">
             <Columns>
                 <asp:CommandField ShowSelectButton="True" />
-                <asp:DynamicField DataField="IdTipoIdentificacion" HeaderText="IdTipoIdentificacion" />
-                <asp:DynamicField DataField="Nombre" HeaderText="Nombre" />
-                <asp:DynamicField DataField="Puesto" HeaderText="Puesto" />
-                <asp:DynamicField DataField="IdDepartamento" HeaderText="IdDepartamento" />
-                <asp:DynamicField DataField="FechaNacimiento" HeaderText="FechaNacimiento" />
-
+                <asp:BoundField DataField="Nombre" HeaderText="Nombre" SortExpression="Nombre" />
+                <asp:BoundField DataField="SalarioXHora" HeaderText="SalarioXHora" SortExpression="SalarioXHora" />
             </Columns>
+    </asp:GridView>
+    <asp:SqlDataSource ID="SqlDataPuesto" runat="server" ConnectionString="<%$ ConnectionStrings:TareaDosConexionPuesto %>" SelectCommand="ListarPuestos" SelectCommandType="StoredProcedure"></asp:SqlDataSource>
+        <br />
+        
 
-        </asp:GridView>
-
-    </div>
-</asp:Content>
+    </asp:Content>

@@ -127,7 +127,6 @@
     <Content Include="Scripts\DatosTarea2.xml" />
     <Content Include="WebPages\Asistencia.aspx" />
     <Content Include="WebPages\Empleado.aspx" />
-    <Content Include="WebPages\PaginaInicio.aspx" />
     <Content Include="WebPages\Planilla.aspx" />
     <Content Include="WebPages\Puestos.aspx" />
     <Content Include="WebPages\Registro.aspx" />
@@ -230,13 +229,6 @@
     </Compile>
     <Compile Include="WebPages\Empleado.aspx.designer.cs">
       <DependentUpon>Empleado.aspx</DependentUpon>
-    </Compile>
-    <Compile Include="WebPages\PaginaInicio.aspx.cs">
-      <DependentUpon>PaginaInicio.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="WebPages\PaginaInicio.aspx.designer.cs">
-      <DependentUpon>PaginaInicio.aspx</DependentUpon>
     </Compile>
     <Compile Include="WebPages\Planilla.aspx.cs">
       <DependentUpon>Planilla.aspx</DependentUpon>

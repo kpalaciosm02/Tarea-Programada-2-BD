@@ -12,8 +12,8 @@
         <div class="col-md-4">
             <h2>Puestos</h2>
             <p>
-                ASP.NET Web Forms lets you build dynamic websites using a familiar drag-and-drop, event-driven model.
-            A design surface and hundreds of controls and components let you rapidly build sophisticated, powerful UI-driven sites with data access.
+                La página de puestos te permite crear, borrar y editar los puestos de la base de datos para luego poder
+                usarlos en distintos empleados según las necesidades.
             </p>
             <p>
                 <a class="btn btn-default" href="WebPages/Puestos.aspx" aria-disabled="False">Avanzado &raquo;</a>
@@ -22,7 +22,8 @@
         <div class="col-md-4">
             <h2>Empleados</h2>
             <p>
-                NuGet is a free Visual Studio extension that makes it easy to add, remove, and update libraries and tools in Visual Studio projects.
+                La página de empleados está diseñada para poder borrar, editar y agregar empleados. Desde acá se podría, por ejemplo,
+                cambiar el puesto de un empleado.
             </p>
             <p>
                 <a class="btn btn-default" href="WebPages/Empleado.aspx" aria-disabled="True">Avanzado &raquo;</a>
@@ -31,7 +32,7 @@
         <div class="col-md-4">
             <h2>Asistencia</h2>
             <p>
-                You can easily find a web hosting company that offers the right mix of features and price for your applications.
+                Desde está página se puede ver el reporte de asistencia de los empleados registrados.
             </p>
             <p>
                 <a class="btn btn-default" href="https://go.microsoft.com/fwlink/?LinkId=301950" aria-disabled="True">Avanzado »</a>

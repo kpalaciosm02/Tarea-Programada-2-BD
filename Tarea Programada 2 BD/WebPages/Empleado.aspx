@@ -17,11 +17,11 @@
             <td>&nbsp;</td>
         </tr>
         <tr>
-            <td class="modal-sm" style="width: 109px">Tipo ID</td>
-            <td>
+            <td class="modal-sm" style="width: 109px; height: 23px;">Tipo ID</td>
+            <td style="height: 23px">
                 <asp:TextBox ID="TextBox2" runat="server"></asp:TextBox>
             </td>
-            <td>&nbsp;</td>
+            <td style="height: 23px"></td>
         </tr>
         <tr>
             <td class="modal-sm" style="width: 109px; height: 22px;">Valor ID</td>
@@ -57,16 +57,7 @@
             <td>&nbsp;</td>
         </tr>
     </table>
-    <div _designerregion="0">
         <asp:Label ID="Label1" runat="server" Text="Label"></asp:Label>
         <br />
-        <asp:SqlDataSource ID="SqlDataSource1" runat="server" ConnectionString="<%$ ConnectionStrings:TareaDosConexionPuesto %>" SelectCommand="spInsertarPuesto" SelectCommandType="StoredProcedure">
-            <SelectParameters>
-                
-                <asp:ControlParameter Name="Nombre" Type="String" ControlID="TextBox1" />
-                <asp:ControlParameter Name="SalarioXHora" Type="Int32" ControlID="TextBox2" />
-
-            </SelectParameters>
-        </asp:SqlDataSource>
-    </div>
-</asp:Content>
+        
+    </asp:Content>
